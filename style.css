@@ -1,0 +1,427 @@
+/*
+ Theme Name:   Bricks Child Theme
+ Theme URI:    https://bricksbuilder.io/
+ Description:  Use this child theme to extend Bricks.
+ Author:       Bricks
+ Author URI:   https://bricksbuilder.io/
+ Template:     bricks
+ Version:      1.1
+ Text Domain:  bricks
+*/
+
+body {
+    background-color: #f2f2f2;
+}
+
+body.bricks-is-frontend :focus {
+    outline: none;
+}
+
+.button i.fas.fa-shopping-cart {
+    font-size: 12px;
+}
+
+
+
+/* custom add to cart */
+
+.custom-add-to-cart-button .quantity {
+    display: none!important;
+}
+
+.custom-add-to-cart-button {
+    width: 35px!important;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #00915A;
+}
+
+.custom-buttons-hover {
+    width: 80%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 200px;
+}
+
+.custom-buttons-hover {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.custom-buttons-hover.show {
+    display: flex;
+    opacity: 1;
+}
+
+/* cart page product item image */
+
+.cart-product-item-image-bg {
+    border-radius: 50%;
+    background: linear-gradient(83deg, rgba(176, 203, 82, 0.07) -11.95%, rgba(0, 145, 90, 0.07) 71.88%, rgba(0, 150, 210, 0.07) 103.68%);
+}
+
+.custom-cart-page-quantity .quantity .plus {
+    border-radius: 0px 20px 20px 0px!important;
+}
+
+.woocommerce-cart-form .quantity {
+    width: 100%!Important;
+}
+
+.desktop-quantity-input {
+    width: 200px!important;
+}
+
+/* login/Registrtation Form Field Styles */
+
+/* billing form */
+
+.woocommerce-billing-fields__field-wrapper input {
+    border-radius: 12px;
+    margin: 8px 0px;
+}
+
+/* ajax search element */
+
+.bricks-product-search {
+    position: relative;
+    max-width: 400px;
+  }
+  
+  #product-search-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  #product-search-results {
+    margin-top: 5px;
+    border-radius: 10px;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    width: 100%;
+    z-index: 10;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .product-search-results li {
+    padding: 10px;
+    list-style: none;
+  }
+  
+  .product-search-results li a {
+    display: flex;
+    align-items: center;
+  }
+  
+  .product-search-results li img {
+    max-width: 50px;
+  }
+  
+  .product-search-results li span {
+    font-size: 14px;
+    color: #333;
+  }
+
+  /* product Carousel with category select and count */
+
+  /* მობილურის ვერსიაზე პროდუქტის დასახელების ტექსტის ორ ხაზზე შემოფარგვლა */
+@media (max-width: 768px) {
+    .product-name {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        max-height: 3em; /* ორხაზიანი ტექსტისთვის */
+    }
+}
+
+
+  .custom-product-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 10px;
+    transition: transform 0.3s ease-in-out; /* კარუსელის გადაადგილებისთვის */
+}
+
+.carousel-item {
+    flex: 0 0 calc(100% / var(--cards-per-row)); /* თითოეული კარდის სიგანე */
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.custom-product-carousel .my-prev, .custom-product-carousel .my-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--arrows-bg-color, #fff);
+    color: var(--arrows-color, #000);
+    padding: var(--arrows-padding, 10px);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.custom-product-carousel .my-prev {
+    left: 10px;
+}
+
+.custom-product-carousel .my-next {
+    right: 10px;
+}
+
+.custom-product-carousel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.custom-product-carousel .product {
+    text-align: center;
+}
+
+.custom-product-carousel .product img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ქარდის ჰოვერის შემთხვევაში ცენტრში მდებარე აიქონების გამოჩენა */
+.custom-product-item:hover .product-icons {
+  opacity: 1;
+}
+
+/* მობილური ვერსია - აიქონები მუდმივად ჩანს ჰოვერის გარეშე */
+@media (max-width: 768px) {
+  .product-icons {
+      opacity: 1 !important;
+  }
+}
+
+.product-icons-div-a .product-link {
+  flex-grow: unset!important;
+}
+
+/* hide woocommerce title */
+
+.woocommerce-cart h1 {
+    display: none;
+}
+
+
+/* custom pogination list */
+
+.product-count-container {
+    font-size: 14px;
+    color: #333;
+}
+
+.custom-pagination-list li {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.custom-pagination-list li span {
+    background: #00915A;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+}
+
+.custom-pagination-list .dots {
+    background: rgba(0, 145, 90, 0.70);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+}
+
+.custom-pagination-list li a {
+    background: rgba(0, 145, 90, 0.70);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+}
+
+/* custom-products-archive-main */
+
+.custom-products-archive-main {
+    padding: 25px 80px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .custom-products-archive-main {
+        padding: 16px;
+        margin-top: 50px;
+    }
+
+    .custom-products-archive-filter {
+        gap: 10px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .custom-products-archive-main {
+        padding: 25px 80px;
+    }
+
+    .custom-products-archive-filter {
+        gap: 40px
+    }
+}
+
+/* mobile add to cart */
+
+.mobile-add-to-cart .quantity {
+    display: none!important;
+}
+
+.mobile-add-to-cart .custom-wishlist-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+}
+
+.mobile-add-to-cart .custom-wishlist-icon a {
+    padding: 10px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-add-to-cart .custom-wishlist-icon i {
+    font-size: 18px;
+}
+
+
+
+.mobile-add-to-cart .custom-add-to-cart-button {
+    width: 40px!important;
+    height: 40px;
+    background-color: #D9D9D9;
+}
+
+
+.product-wishlist-icon-desktop {
+    width: 35px;
+    height: 35px;
+    background-color: #00915a;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-wishlist-icon-desktop .sw-add-to-wishlist a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.product-wishlist-icon-desktop .sw-add-to-wishlist {
+    margin: 0px;
+    font-size: 18px;
+    color: white;
+}
+
+.product-wishlist-icon-desktop .sw-add-to-wishlist .fas {
+    color: white!important;
+}
+
+
+
+.product-wishlist-icon-desktop .sw-add-to-wishlist .far {
+    color: white;
+}
+
+.product-wishlist-icon-desktop .sw-add-to-wishlist:hover .far {
+    color: white;
+}
+
+.product-wishlist-icon-desktop .sw-wishlist li a.remove:hover {
+    color: white;
+}
+
+@media screen and (min-width: 1024px) {
+    .mobile-svg {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .desktop-svg {
+        display: none;
+    }
+}
+
+
+/* add to cart mobile version */
+
+.cart-notification {
+    position: fixed;
+    width: 80%!important;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #00915a;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 4px;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.cart-notification.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* მხოლოდ მობილურსა და ტაბლეტზე გამოჩნდეს */
+@media (min-width: 1025px) {
+    .cart-notification {
+        display: none;
+    }
+}
+
+/* checkout shipping details */
+
+
+
+
+/* bricks content margins */
+

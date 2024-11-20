@@ -1,0 +1,26 @@
+.mini-cart {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.mini-cart.open {
+    display: block;
+}
+
+.mini-cart-toggle {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1001;
+}

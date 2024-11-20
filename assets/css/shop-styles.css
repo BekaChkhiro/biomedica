@@ -1,0 +1,209 @@
+/* assets/css/shop-styles.css */
+
+/* პროდუქტების გრიდის სტილები */
+.custom-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 0px 0px 20px;
+}
+
+.custom-product-item {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* პროდუქტის სურათის wrapper */
+.product-thumbnail-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Desktop იკონების სტილები */
+.product-icons-desktop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.product-thumbnail-wrapper:hover .product-icons-desktop {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.product-icons-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+}
+
+.product-icons-buttons {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+
+/* ღილაკების სტილები */
+.custom-add-to-cart-button .button,
+.product-wishlist-icon .sw-wishlist-icon {
+  background-color: #f3f4f6 !important;
+  border: none !important;
+  padding: 10px !important;
+  border-radius: 4px !important;
+  transition: all 0.3s ease !important;
+}
+
+.button:hover,
+.product-wishlist-icon .sw-wishlist-icon:hover {
+  background-color: #00905a !important;
+  color: white !important;
+}
+
+/* მობილური სტილები */
+@media (max-width: 768px) {
+  .product-icons-desktop {
+      display: none !important;
+  }
+  
+  .mobile-icons {
+      display: flex;
+      margin-top: 15px;
+      gap: 10px;
+  }
+  
+  .mobile-icons .button,
+  .mobile-icons .sw-wishlist-icon {
+      background-color: #f3f4f6 !important;
+      border-radius: 50% !important;
+  }
+}
+
+/* Loading ინდიკატორი */
+.custom-products-grid.loading {
+  position: relative;
+  min-height: 200px;
+}
+
+.custom-products-grid.loading:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 1000;
+}
+
+.custom-products-grid.loading:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #00905a;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  z-index: 1001;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+
+/* Pagination სტილები */
+/* პაგინაციის სტილები */
+.custom-pagination-container { 
+  background: white;
+}
+
+.results-count {
+  color: #333;
+  font-size: 14px;
+}
+
+.woocommerce-pagination ul.page-numbers {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 4px;
+  align-items: center;
+}
+
+.woocommerce-pagination .page-numbers li {
+  margin: 0;
+}
+
+.woocommerce-pagination .page-numbers {
+  min-width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  border: none;
+}
+
+.woocommerce-pagination .page-numbers.current {
+  background-color: #00905a;
+  color: white;
+}
+
+.woocommerce-pagination .prev.page-numbers,
+.woocommerce-pagination .next.page-numbers {
+  font-size: 16px;
+  background: none;
+}
+
+.woocommerce-pagination ul {
+  background: none!important;
+}
+
+.woocommerce-pagination .dots {
+  background: none !important;
+  padding: 0 2px !important;
+}
+
+.woocommerce-pagination {
+  margin: 0px!important;
+}
+
+@media (max-width: 768px) {
+  .custom-pagination-container {
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+      padding: 15px;
+  }
+  
+  .results-count {
+      text-align: center;
+  }
+}

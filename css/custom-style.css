@@ -1,0 +1,326 @@
+/* minin cart css */
+
+
+.cart-detail {
+    width: 35%;
+    height: 100%;
+    position: fixed!important;
+    top: 0!important;
+    right: 0!important;
+} 
+
+.custom-mini-cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* custom cart count */
+
+.custom-cart-count-container {
+    width: 100%;
+    height: 8%;
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #B0CB52;
+    background: rgba(0, 145, 90, 0.05);
+}
+
+.custom-cart-item-count {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50%;
+    background: #00915A;
+}
+
+.custom-cart-count-label {
+    color: #000;
+    font-family: "Noto Sans Georgian";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+/* custom cart content */
+
+.custom-cart-content {
+    height: 92%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px 10px 24px 24px;
+}
+
+.custom-cart-items-content {
+    height: 75%;
+    overflow-y: scroll;
+}
+
+.custom-mini-cart-order-review {
+    font-family: "Noto Sans Georgian"!important;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* cart items */
+
+.custom-cart-content .woocommerce-mini-cart {
+    padding-right: 10px;
+}
+
+.custom-cart-content .woocommerce-mini-cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.custom-cart-content .product-thumbnail img {
+    max-width: 50px;
+    max-height: 50px;
+    object-fit: cover;
+}
+
+.custom-cart-content .product-info {
+    flex: 1;
+    gap: 10px;
+    padding: 0 10px;
+}
+
+.custom-cart-content .product-name {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.custom-cart-content .product-price {
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+    color: #4CAF50;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.custom-cart-content .product-quantity input {
+    width: 50px;
+    text-align: center;
+}
+
+.custom-cart-content .product-remove .remove {
+    color: red;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.brxe-woocommerce-mini-cart .cart-detail li .remove {
+    bottom: 50px;
+}
+
+/* mini cart subtotal */
+
+.woocommerce-mini-cart__total {
+    color: #00915A!important;
+}
+
+
+/* custom mini cart buttons */
+
+.mini-cart-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.custom-mini-cart-cart-button {
+    width: 100%!important;
+    display: flex!important;
+    color: #00915A!important;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 30px;
+    background: #FFF!important;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
+}
+
+.custom-mini-cart-checkout-button {
+    width: 100%!important;
+    display: flex!important;
+    color: white!important;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 30px;
+    background: #00915A!important;
+}
+
+/* Custom styles for mini cart */
+.mini-cart-open .mini-cart {
+    display: block;
+}
+
+.mini-cart {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    z-index: 9999;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Styles for Add to Cart button */
+.ajax-add-to-cart {
+    position: relative;
+}
+
+.ajax-add-to-cart.loading::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255,255,255,0.5) url('path/to/your/loading-spinner.gif') center no-repeat;
+}
+
+/* Custom styles for mini cart */
+.mini-cart-open .mini-cart {
+    display: block;
+}
+
+.mini-cart {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    z-index: 9999;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Styles for Add to Cart button */
+.ajax-add-to-cart {
+    position: relative;
+}
+
+.ajax-add-to-cart.loading::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255,255,255,0.5) url('path/to/your/loading-spinner.gif') center no-repeat;
+}
+
+/* Hide default "added to cart" message */
+.woocommerce-message {
+    display: none !important;
+}
+
+/* Responsive styles for SVG icons */
+.desktop-svg {
+    display: inline-block;
+}
+
+.mobile-svg {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .desktop-svg {
+        display: none;
+    }
+    
+    .mobile-svg {
+        display: inline-block;
+    }
+}
+
+/* Custom styles for Bricks mini cart */
+.cart-detail-d14a59 {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    /* Add any other default styles for the mini cart here */
+}
+
+.cart-detail-d14a59.active {
+    opacity: 1;
+    visibility: visible;
+    /* Add any other styles for the active mini cart here */
+}
+
+/* Styles for Add to Cart button */
+.ajax-add-to-cart {
+    position: relative;
+}
+
+.ajax-add-to-cart.loading::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255,255,255,0.5) url('path/to/your/loading-spinner.gif') center no-repeat;
+}
+
+/* Hide default "added to cart" message and button changes */
+.woocommerce-message,
+.added_to_cart {
+    display: none !important;
+}
+
+/* Prevent button text change */
+.ajax-add-to-cart.added::after {
+    display: none !important;
+}
+
+/* Responsive styles for SVG icons */
+.desktop-svg {
+    display: inline-block;
+}
+
+.mobile-svg {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .desktop-svg {
+        display: none;
+    }
+    
+    .mobile-svg {
+        display: inline-block;
+    }
+}
